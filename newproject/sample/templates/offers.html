@@ -1,0 +1,91 @@
+{% extends 'userbase.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Goblin+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aclonica&family=Goblin+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <style>
+body{
+    background-image:url("{% static 'images/c15.jpg'%}");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+  color:darkgreen;
+  font-size: 15px;
+  line-height: 15px;
+  font-family: 'Goblin One', cursive;
+} 
+h5{
+  color:black;
+  font-family: 'Goblin One', cursive;
+  font-size: 20px;
+}
+
+h2{
+    color: darkred;
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-weight: 900;
+}
+
+h1{
+  color:navy;
+  font-family: 'Goblin One', cursive;
+  font-size: 30px;  
+}
+
+.card{
+  width: 450px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 17px;
+  padding: 17px 27px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition:transform 0.5s;
+}
+
+        </style>
+        <body>
+            <div class="main">
+                <div class="heading">
+                    <h2>EXCITING OFFERS FOR YOU</h2>
+                </div>
+                <div class="offer">
+                      <div class="row">  
+                        {% for d in data %}
+                        <div class="col-md-4">                
+                        <div class="card bg-light" style="width:20rem; height:23rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{d.title}}</h5>
+                                <p class="card-text">{{d.description}}</p>
+                                <p >*Actual Price:</p><h1>{{d.actual_price}}</h1>
+                                <p >*Offer:</p><h1>{{d.offer}}</h1>
+                                <a href="{% url 'offer_booking' d.id %}" class="btn btn-success" style="width: 40%; padding: 10px 10px 10px 10px;">Buy Offer</a>
+                                <a href="{% url 'offer_images' d.id %}" class="btn btn-success" style="width: 40%;padding: 10px 10px 10px 10px;">Image</a>  
+                            </div>
+                        </div>
+                </div>
+                {% endfor %}
+
+                </div>
+                </div> 
+        </body>
+        
+</html> 
+{% endblock content %} 

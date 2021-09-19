@@ -1,0 +1,138 @@
+{% extends 'userbase.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Roboto:wgt@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto',sans-serif;
+        }
+        body{
+            background-image: url("{% static 'images/us.jpg'%}");
+            /* background-repeat:no-repeat; */
+            background-size: 65%;
+            height: 700px;
+        }
+        
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;  
+            padding-left: 20%;
+            color: brown;
+        }
+        .col{
+            flex-basis: 50%;
+        }
+        h1{
+            align-items:center;
+            color:darkblue;
+            font-size: 70px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            z-index: 2000px;
+            margin-left: 100px;
+        }
+        h2{
+            color:darkred;
+            margin-left: 100px;
+
+        }
+         p{
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        } 
+        h5{
+            color:white;
+        }
+        .card{
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition:transform 0.5s;
+        }
+        .card1{
+            background-image: url("{% static 'images/bl.jpg'%}");
+            }
+         .card2{
+            background-image: url("{% static 'images/bl1.jpg'%}");
+            }
+        .card3{
+            background-image: url("{% static 'images/bl2.jpg'%}");
+            }
+        .card4{
+            background-image: url("{% static 'images/bl3.jpg'%}");
+            }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        .login{
+            display: flex;
+            margin-left: 300px;
+            padding: 50px 50px 50px 50px; 
+        }
+
+    
+    </style>
+</head>
+<body>
+    
+    
+    <div class="row">
+        <div class="col">
+            <h1>Are You Fired Up For The Weekend ?</h1><br>
+            <h2>"We're The New Low-Cost Car Rental Company"</h2>
+        </div>    
+         <div class="col">
+            <div class="card card1" style="width: 12rem;">
+                <h5>BEST CAR IN THE LOWEST RATE</h5>
+               <P>At The Lowest Possible Rate</P> 
+            </div>
+            <div class="card card2" style="width: 12rem;">
+                <h5>TOP QUALITY CARS FOR RENT</h5>
+                 <P>New Model.Clean.Budget Rate</P> 
+            </div>
+            <div class="card card3" style="width: 12rem;">
+                <h5>RENT YOUR DREAM CAR</h5>
+                <P>Any Pickup & Dropoff Points</P> 
+            </div> 
+             <div class="card card4" style="width: 12rem;">
+                <h5>FIND THE RIGHT CAR FOR YOU</h5>
+                <P>Best Price Guaranteed</P> 
+            </div> 
+           
+        </div> 
+        
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+{% endblock content %}

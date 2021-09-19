@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<style>
+
+    body{
+        background-image:url("{% static 'images/term1.jpg'%}"); 
+        background-repeat:repeat; 
+        background-size: cover; 
+        /* height: 300px;   */
+
+    }
+    
+    h1{
+        color:lightgray;
+        text-align: center;
+        font-family: 'Arvo', serif;
+        font-weight: 900;
+        }
+    p{
+        color:white;
+        font-family: 'Arvo', serif;
+        font-weight: 200;
+        font-size: 18px;
+
+    }
+    
+
+</style>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1><u>TERMS AND CONDITIONS</u></h1>
+                </div>
+                <div class="content">
+                    <p>1. We don’t take any sort of securities from customers, please make sure you have attached 
+                        the relevant documents(Photo+Passport Copy and Visa page +Driving License [Indian/International] ) 
+                        as prescribed in the booking form. You just need to show as the original documents once you arrive.</p>
+                    <p>2. First time customer – Vehicle will be delivered at your home address(as per document proof) or 
+                        If Airport pickup is needed driver will pick you up from Airport(can provide you the car from airport
+                        itself on fulfilling exact booking with all required documents submitted on the website) and will drop
+                        you with the vehicle at your home address(only first time). Payment of rental period should be made 
+                        in advance on delivery of vehicle.</p>
+                    <p>3. Existing customers– Vehicle will be provided before your arrival or at Home address /Airport /
+                        Place of your choice.</p>
+                    <p>4. There is monthly mileage restriction of 4000 kms, if less than a month it will be 130 kms/day.
+                        Extra kms over the rental period are chargeable.</p>
+                    <p>NB: For Fortuner and other Luxury Cars(eg: Audi, BMW) The daily limit is 100 kms/day</p>
+                    <p>5. On an event of accident or damage to vehicle :</p>
+                    <p>* You need to inform our Operations Team on +919497027049 the same time.</p>
+                    <p>* Insurance will be used  only on repair charges above limit, either case rental for the repair 
+                        period need to be paid.</p>
+                    <p>* Collision Repair Limit (repair cost below limit need to be fully paid by the customer as per actuals)</p>
+                    <p>6. All traffic rule violations (eg: over speed, signal breaking ..) or any other offenses, during the rental 
+                        period will be the responsibility of the hirer and the charges or penalty for the same will be charged
+                        to the hirer.</p>
+                    <p>7. Please treat the vehicle as your own and keep it clean and tidy. 
+                        “No smoking or littering inside the car”.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          
+</body>
+</html>
+
+
+{% endblock content %}

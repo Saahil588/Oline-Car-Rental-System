@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  </head>
+
+  <style>
+    .topnav a:hover {
+      border-bottom: 3px solid red;
+  }
+/* .collapse ul .login li{
+  margin-left: 800px;
+  display: inline; 
+} */
+.collapse ul li a{
+  font-size: 17px;
+  font-family: 'Bungee', cursive;
+  color: white; 
+}
+footer{
+  background-color:gray;
+}
+footer h5{
+  color:black;
+}
+footer p{
+  color: white;
+  font-size: 16px;
+  /* font-family: Arial, Helvetica, sans-serif */ 
+
+}
+footer ul li a{
+  color: white;
+}
+
+
+</style>
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-secondary ">
+
+         <a class="navbar-brand text-white" href="#">CAR RENTAL SYSTEM</a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'homepage' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'aboutpage' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'service' %}">Services</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'terms' %}">Terms</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a> 
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+      {% block content %}
+      {% endblock content %}
+
+      <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">ABOUT US</h5>
+        <p>A car rental, hire car, on car hire agency is a company that rents automobiles for short periods of 
+          time.To get in touch, you simply have to go through an easy and fast procedure. NRIs can book the car of 
+          their choice in advance and make the location and duration clear for better services.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">SERVICES</h5>
+        <p>No Downpayment</p>
+        <p>Free Insurance </p>
+        <p>Zero Hidden Charges</p>
+
+      </div>
+      
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">CONTACT US</h5>
+        <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+        <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+        <p><i class="fa fa fa-envelope"></i> carrentalservice@.com  </p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="https://mdbootstrap.com/"> carrentalsystem.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+    
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+</body>
+</html>
+    
+  

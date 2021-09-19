@@ -1,0 +1,177 @@
+
+{% extends 'userbase.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+         body{
+            background-image: url("{% static 'images/c14.jpg'%}");
+            background-size: 150%;
+            background-position: -400px 0px;
+            } 
+        .main{
+            width: 700px;
+            margin: 14px auto 0px auto;
+            
+        }
+        h2{
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        .booking{
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            font-size: 18px;
+            border-radius: 10px;
+            border-radius: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+        form#booking{
+            margin: 40px;
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 18px;
+            
+        }
+        input#name{
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        input#rate{
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        input#day{
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        input#days{
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        #textarea{
+            width: 400px;
+            
+        }
+        input#submit{
+            width: 200px;
+            padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 600;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+        label,h2{
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="booking">
+            <h2>BOOKING FORM</h2>
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Customer Name<label><br>
+                    <input type="text" name="cname" id="name" value="{{data.username}}" class="form-control"><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Contact Number</label>
+                    <input type="number" name="ph" id="name" value="{{data.ph}}" class="form-control"><br>
+                </div>
+                <div class="col-sm-5">
+                    <label class="col-md-4.5 control-label">Email</label>
+                    <input type="email" name="email" id="name" value="{{data.email}}" class="form-control"><br>
+                </div>
+                <div class="col-sm-5">
+                    <label class="col-md-4.5 control-label">Pickupp Date</label>
+                    <input type="date" name="pickup_date" id="name"  class="form-control"><br>
+                </div>
+                <div class="col-sm-5">
+                    <label class="col-md-4.5 control-label">Dropoff Date</label>
+                    <input type="date" name="dropoff_date" id="name"  class="form-control"><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Pickupp Address</label>
+                    <textarea class="textarea"  id="textarea" name="pickup_address" class="form-control"></textarea><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Dropoff Address</label>
+                    <textarea class="textarea"  id="textarea" name="dropoff_address" class="form-control"></textarea><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Total Days</label>
+                    <input type="number" name="total_days" id="days" onkeyup="myfunc(this)"  class="form-control"><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Rate Per Day</label>
+                    <input type="number" name="rate_perday" id="day" value="{{car.rate}}" class="form-control"><br>
+                </div>
+                <div class="col-sm-6">
+                    <label class="col-md-6.5 control-label">Total Rate</label>
+                    <input type="number" name="rate" id="rate" class="form-control"><br>
+                </div>
+                <div class="btn col-sm-4" style="margin-left: 33px;" >
+                    <input type="submit" value="Confirm Booking" name="submit" id="submit">
+                </div>
+                </form>
+        </div>
+
+    </div>
+    <script>
+        function myfunc(input1){
+            // var y = document.getElementById("days")
+            var x = document.getElementById("day").value;
+            document.getElementById("rate").value = eval(input1.value) * eval(x);
+            // alert(x)
+        }
+        </script>
+    
+</body>
+</html> 
+{% endblock content %}

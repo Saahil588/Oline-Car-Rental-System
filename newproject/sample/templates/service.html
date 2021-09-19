@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    body{
+        background-image:url("{% static 'images/ser.jpg'%}"); 
+        background-repeat:repeat; 
+        background-size: cover; 
+        /* height: 300px;   */
+
+    }
+p{
+  color: black;
+  font-size: 15px;
+  line-height: 15px;
+} 
+h2{
+    color:wheat;
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-weight: 900;
+    }
+h5{
+  color:blue;
+  text-align: center;
+}
+.card{
+  width: 450px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 17px;
+  padding: 17px 27px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition:transform 0.5s;
+}
+
+</style>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h2><u>OUR SERVICES</u></h2>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/snd2.jpg'%}" alt="card image cap">
+            <div class="card1">
+                <h5 class="card-title">NO DOWNPAYMENT</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/sfi.jpg'%}" alt="card image cap">
+            <div class="card2">
+                <h5 class="card-title">FREE INSURANCE</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/nhc.jpg'%}" alt="card image cap">
+            <div class="card3">
+                <h5 class="card-title">ZERO HIDDEN CHARGES</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/chec.jpg'%}" alt="card image cap">
+            <div class="card4">
+                <h5 class="card-title">LONG TERM CHECK-UPS</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/shock.jpg'%}" alt="card image cap">
+            <div class="card5">
+                <h5 class="card-title">INSPECT SHOCKS AND STRUTS</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/flui.jpg'%}" alt="card image cap">
+            <div class="card6">
+                <h5 class="card-title">COOLANT FLUID EXCHANGE</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/ses.jpg'%}" alt="card image cap">
+            <div class="card7">
+                <h5 class="card-title">SEASONAL CHECK-UPS</h5>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem; height: 16rem;">
+            <img class="card-img-top" src="{% static 'images/tir.jpg'%}" alt="card image cap">
+            <div class="card7">
+                <h5 class="card-title">TIRE PRESSURE AND TREAD DEPTH</h5>
+            </div>
+        </div>
+    </div>
+        
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
+{% endblock content %}

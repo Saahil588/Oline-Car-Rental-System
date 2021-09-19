@@ -1,0 +1,105 @@
+{% extends 'userbase.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap" rel="stylesheet">
+    
+    <style>
+      body{
+            background-image: url("{% static 'images/ui.jpg'%}") ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+  p{
+    color:darkslategray;
+    font-size: 18px;
+    line-height: 15px;
+    font-family: 'Arvo', serif;
+    font-weight: 800;
+    } 
+
+  h2{
+    color:darkred;
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-weight: 900;
+    }
+
+h5{
+  color:darkslateblue;
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  }
+h1{
+    font-size: 20px;
+    font-family: 'Newsreader', serif;
+    font-weight: 800;
+    color:darkcyan;
+  }
+
+
+.card{
+  width: 450px;
+  height: 300px;
+  display: inline-block; 
+  border-radius: 17px;
+  padding: 17px 27px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition:transform 0.5s;
+}
+
+</style>
+</head>
+<body>
+  <div class="main">
+    <div class="heading">
+        <h2>CARS</h2>
+    </div>
+    <div class="cars">
+          <div class="row">  
+            {% for d in data %}
+            <div class="col-md-4">                 
+            <div class="card bg-light" style="width:20rem; height:30rem;">
+                <div class="card-body">
+                  <img class="card-img-top" src="{{d.image.url}}" alt="card image cap">
+                  <h5 class="card-title">{{d.car_name}}</h5>
+                  <p>Car Type:</p><h1>{{d.car_type}}</h1>
+                  <p>Company Name:</p><h1>{{d.company_name}}</h1>
+                  <p>Rate Per Day:</p><h1>{{d.rate}}</h1>
+                  <a href="{% url 'car_booking' d.id %}" class="btn btn-primary">Book This Car</a>
+                </div>
+            </div>
+            </div> 
+            {% endfor %}
+
+    </div>
+    </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+  </html>
+{% endblock content %}
+      
+  
+  

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?
+    family=Roboto:wgt@400;700&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto',sans-serif;
+        }
+        body{
+            background-image: url("{% static 'images/bag1.jpg'%}");
+            background-repeat:no-repeat;
+            background-size: cover;
+            height: 700px;
+        }
+        
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;  
+            padding-left: 20%;
+            color: brown;
+        }
+        .col{
+            flex-basis: 50%;
+        }
+        h1{
+            color:brown;
+            font-size: 65px;
+            font-family:Arial, Helvetica, sans-serif; 
+            /* font-family: 'Arvo', serif; */
+            font-weight: 800;
+            z-index: 2000px;
+            margin-right: 100px; 
+        }
+         p{
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        } 
+        h5{
+            color:white;
+        }
+        .card{
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition:transform 0.5s;
+        }
+        .login{
+            display: flex;
+            margin-left: 300px;
+            padding: 50px 50px 50px 50px; 
+        }
+    
+    </style>
+</head>
+<body>
+    
+    
+    <div class="row">
+        <div class="col">
+            <h1>ONLINE CAR RENTAL SYSTEM</h1>
+            <div class="login"> 
+                <a class="nav-link btn btn-primary" href="{% url 'login' %}">Login</a>
+                <a class="nav-link btn btn-danger" style="margin-left:40px" href="{% url 'register' %}">Register</a>      
+            </div>
+        </div>
+    </div> 
+
+{% endblock content %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
